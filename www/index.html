@@ -6,11 +6,11 @@
     <title>Developer Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f9;
-            color: #333;
+            background: linear-gradient(120deg, #1a1a2e, #16213e);
+            color: #eaeaea;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -18,26 +18,37 @@
 
         header {
             width: 100%;
-            background: #007acc;
+            background: #0f3460;
             color: white;
             text-align: center;
-            padding: 1.5rem 0;
+            padding: 2rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
 
         main {
-            max-width: 900px;
+            max-width: 1100px;
             width: 90%;
             margin: 2rem auto;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         section {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 80%;
+        }
+
+        section h2 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            color: #00d4ff;
         }
 
         .languages {
@@ -48,83 +59,173 @@
         }
 
         .language {
-            background: #007acc;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #0f3460;
             color: white;
-            padding: 0.5rem 1rem;
+            padding: 0.7rem 1.2rem;
             border-radius: 5px;
             font-size: 1rem;
+            transition: transform 0.2s, background 0.2s;
+            cursor: pointer;
+            gap: 0.5rem;
+        }
+
+        .language img {
+            height: 50px;
+            width: auto;
+        }
+
+        .language:hover {
+            transform: translateY(-5px);
+            background: #00d4ff;
         }
 
         footer {
             width: 100%;
-            background: #333;
+            background: #0f3460;
             color: white;
             text-align: center;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
         }
 
-        footer a {
-            color: #007acc;
-            text-decoration: none;
+        .footer-icons {
+            display: flex;
+            gap: 1.5rem;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        .footer-icons a {
+            color: white;
+            transition: transform 0.2s;
+        }
+
+        .footer-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-icons svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
         }
 
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
 
             .language {
                 font-size: 0.9rem;
             }
+
+            .footer-icons svg {
+                width: 25px;
+                height: 25px;
+            }
         }
 
         @media (max-width: 480px) {
             header h1 {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
 
             .language {
                 font-size: 0.8rem;
+            }
+
+            .footer-icons svg {
+                width: 20px;
+                height: 20px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Developer Portfolio</h1>
+        <h1>Luka Deserranno</h1>
+        <p>Software Developer | Student at HOGENT</p>
     </header>
 
     <main>
         <section>
-            <h2>Programming Languages I Know</h2>
-            <div class="languages">
-                <span class="language">HTML</span>
-                <span class="language">CSS</span>
-                <span class="language">JavaScript</span>
-                <span class="language">React</span>
-                <span class="language">Node.js</span>
-                <span class="language">Python</span>
-                <span class="language">Java</span>
-                <span class="language">C#</span>
-                <span class="language">SQL</span>
-                <span class="language">Kotlin</span>
-                <span class="language">Swift</span>
-            </div>
-        </section>
+            <h2>About Me</h2>
+            <p>Hi, I’m Luka Deserranno, a 21-year-old tech enthusiast with a deep passion for development and innovation. Currently, I’m pursuing my Bachelor’s degree in Applied Informatics, where I’m honing my skills and expanding my knowledge in the ever-evolving world of technology.</p>
+            <p>My journey doesn’t stop here—once I’ve completed my Bachelor’s, my next goal is to achieve a Master’s degree in Industrial Engineering with a focus on Computer Science. This will allow me to dive even deeper into the technical challenges I love solving while broadening my understanding of how technology shapes the world.</p>
+            <p>For me, learning is a lifelong journey. I’m driven by the desire to gain as much knowledge as possible, not just to advance my career but to keep my curiosity alive and my interests growing. Whether it’s mastering new programming languages, tackling complex projects, or staying ahead of industry trends, I’m always eager to push boundaries and explore what’s next.</p>
+          </section>
 
         <section>
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:developer@example.com">developer@example.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-            <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
+            <h2>Programming Languages & Tools</h2>
+            <div class="languages">
+              <div class="language">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML">
+                  <span>HTML</span>
+              </div>
+              <div class="language">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="CSS">
+                  <span>CSS</span>
+              </div>
+              <div class="language">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="JavaScript">
+                  <span>JavaScript</span>
+              </div>
+              <div class="language">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React">
+                  <span>React</span>
+              </div>
+              <div class="language">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/nodedotjs.svg" alt="Node.js">
+                  <span>Node.js</span>
+              </div>
+              <div class="language">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python">
+                  <span>Python</span>
+              </div>
+              <div class="language">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/spring.svg" alt="Java">
+                  <span>Java spring</span>
+              </div>
+              <div class="language">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/csharp.svg" alt="C#">
+                  <span>C#</span>
+              </div>
+              <div class="language">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/mysql.svg" alt="SQL">
+                  <span>SQL</span>
+              </div>
+              <div class="language">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/kotlin.svg" alt="Kotlin">
+                  <span>Kotlin</span>
+              </div>
+              <div class="language">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/swift.svg" alt="Swift">
+                  <span>Swift</span>
+              </div>
+              <div class="language">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/dotnet.svg" alt="HTML">
+                <span>dotnet</span>
+            </div>
+          </div>
         </section>
     </main>
 
     <footer>
+        <div class="footer-icons">
+            <a href="mailto:luka.deserranno@outlook.com" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 13.5l-12-9h24l-12 9zm12-8.5v14h-24v-14l12 9 12-9z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/lukadeserranno-6bb029279/" target="_blank" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.297c-.966 0-1.5-.721-1.5-1.453 0-.737.541-1.453 1.526-1.453.986 0 1.5.716 1.5 1.453 0 .732-.539 1.453-1.526 1.453zm13.5 11.297h-3v-5.5c0-1.346-.019-3.078-1.876-3.078-1.875 0-2.164 1.465-2.164 2.982v5.596h-3v-10h2.888v1.354h.041c.403-.763 1.388-1.563 2.856-1.563 3.055 0 3.625 2.011 3.625 4.627v5.582z"/></svg>
+            </a>
+            <a href="https://github.com/LukaDeserranno" target="_blank" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .5c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.207 11.385.6.113.793-.26.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.091-.746.083-.731.083-.731 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.775.419-1.305.762-1.605-2.665-.304-5.466-1.333-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.004.404 2.292-1.552 3.299-1.23 3.299-1.23.653 1.653.242 2.873.118 3.176.769.84 1.236 1.911 1.236 3.221 0 4.609-2.804 5.625-5.476 5.921.431.372.815 1.103.815 2.222v3.293c0 .32.192.694.8.576 4.765-1.585 8.2-6.082 8.2-11.385 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+        </div>
         <p>&copy; 2025 Luka Deserranno. All rights reserved.</p>
     </footer>
 </body>
